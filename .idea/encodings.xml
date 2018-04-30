@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/pika-boss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pika-boss/pika-center-common-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pika-boss/pika-center-common-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pika-boss/pika-center-common-tools" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pika-boss/pika-center-service-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pika-boss/pika-center-service-user-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pika-boss/pika-center-web-boss" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

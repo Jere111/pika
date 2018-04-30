@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <setting name="lazyLoadingEnabled" value="true" />
+        <setting name="aggressiveLazyLoading" value="false" />
+    </settings>
+
+    <typeAliases>
+        <typeAlias type="pers.pika.center.service.user.entity.sys.SysUser" alias="SysUser"/>
+        <typeAlias type="pers.pika.center.service.user.entity.sys.SysPermission" alias="SysPermission" />
+        <typeAlias type="pers.pika.center.service.user.entity.sys.SysRole" alias="SysRole" />
+    </typeAliases>
+
+    <!-- 下面的配置，主要作用是：
+                1、对于实体bean中枚举类型的属性，在进行数据库相关crud操作的时候，可以进行表字段值的映射。
+                2、所以，在新增枚举类的时候，记得务必在这里配置一下。
+    -->
+    <typeHandlers>
+        <typeHandler handler="pers.pika.center.common.core.enums.entity.EntityEnumTypeHandler" javaType="pers.pika.center.common.core.enums.Status" />
+        <typeHandler handler="pers.pika.center.common.core.enums.entity.EntityEnumTypeHandler" javaType="pers.pika.center.service.user.enums.UserStatus"/>
+        <typeHandler handler="pers.pika.center.common.core.enums.entity.EntityEnumTypeHandler" javaType="pers.pika.center.service.user.enums.MenuType"/>
+    </typeHandlers>
+
+
+</configuration>

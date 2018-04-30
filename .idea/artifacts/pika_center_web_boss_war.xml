@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pika-center-web-boss:war">
+    <output-path>$PROJECT_DIR$/pika-boss/pika-center-web-boss/target</output-path>
+    <root id="archive" name="pika-center-web-boss.war">
+      <element id="artifact" artifact-name="pika-center-web-boss:war exploded" />
+    </root>
+  </artifact>
+</component>
