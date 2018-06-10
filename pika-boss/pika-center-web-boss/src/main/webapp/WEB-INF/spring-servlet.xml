@@ -48,12 +48,12 @@
 
 
     <!-- 对模型视图名称的解析，即在模型视图名称添加前后缀 -->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <!-- 指定view视图的位置 -->
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        &lt;!&ndash; 指定view视图的位置 &ndash;&gt;
         <property name="prefix" value="/WEB-INF/view/"></property>
-        <!-- 处理.jsp为后缀名的视图 -->
-        <property name="suffix" value=".jsp"></property>
-    </bean>
+        &lt;!&ndash; 处理.jsp为后缀名的视图 &ndash;&gt;
+        <property name="suffix" value=".ftl"></property>
+    </bean>-->
 
 
     <!-- 避免IE执行AJAX时,返回JSON出现下载文件 -->

@@ -1,4 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +10,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <%--<link rel="stylesheet" href="${_cdnStaticResourcesPath}/resources/static/layui/css/layui.css" media="all">--%>
+    <link rel="stylesheet" href="${_cdnStaticResourcesPath}/resources/static/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="${_cdnStaticResourcesPath}/resources/static/x-admin/css/font.css">
+    <link rel="stylesheet" href="${_cdnStaticResourcesPath}/resources/static/x-admin/css/xadmin.css">
     <link rel="stylesheet" href="${_cdnStaticResourcesPath}/resources/static/other/login-01/style.css" media="all">
+    <script src="${_cdnStaticResourcesPath}/resources/static/layui/layui.all.js" charset="utf-8"></script>
+    <script src="${_cdnStaticResourcesPath}/resources/static/js/jquery-1.9.1.min.js" charset="utf-8"></script>
+
 </head>
 <body>
-<input type="hidden" id="loginUrl" value="${ctx}/login/login"/>
-<form class="layui-form" action="">
+    <input type="hidden" id="loginUrl" value="${ctx}/login/login"/>
     <div class="box_login">
         <div class="logo_login"><img src="${_cdnStaticResourcesPath}/resources/static/images/logo_login.png" alt="分布式系统管理中心"/></div>
         <div class="login_menu">
@@ -31,49 +34,37 @@
             <div class="login_bg2">
                 <div class="login_con">
                     <div class="tit">用户登录</div>
-                    <div class="text mt25">
-                        <span class="icon_user"></span>
-                        <input type="text" name="userName" id="userName" placeholder="输入注册帐号"/>
-                    </div>
-                    <div class="text">
-                        <span class="icon_sec"></span>
-                        <input type="text" name="password" id="password" placeholder="输入密码"/>
-                    </div>
-                    <div class="jzmm">
-                        <input type="checkbox">记住密码
-                    </div>
-                    <a class="btn_basi5 btn_redr" href="javascript:void(0);" onclick="severCheck();" id="loginLink">登 录</a>
-                    <%--<div class="btns">
-                        <a class="l_btn"><img src="images/icon_jt.png"/>登录旧事项系统</a>
-                        <div class="bg"><a class="l_btn" href="忘记密码1.html"><img src="images/icon_ask.png"/>忘记密码</a>
+                    <form class="layui-form" method="post" action="${ctx}/login/login">
+                        <input type="hidden" id="message" value="${message}" />
+                        <div class="text mt25">
+                            <span class="icon_user"></span>
+                            <input type="text" name="userName" id="userName" placeholder="输入用户账号" autocomplete="off" lay-verify="username" class="layui-input" style="margin-left: 50px;margin-top: -37px;"/>
                         </div>
-                    </div>--%>
+                        <div class="text">
+                            <span class="icon_sec"></span>
+                            <input type="password" name="password" id="password" placeholder="输入密码" autocomplete="off" lay-verify="password" class="layui-input" style="margin-left: 50px;margin-top: -35px;"/>
+                        </div>
+                        <div class="jzmm">
+                            <input type="checkbox">记住密码
+                        </div>
+                        <a class="btn_basi5 btn_redr" lay-submit lay-filter="login" href="javascript:void(0);" onclick="severCheck();" id="loginLink">登 录</a>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="footer">
-            <%--<p>
+            <p>
                 系统已更新: 该系统主要支持谷歌和火狐浏览器！&nbsp;&nbsp;
                 下载地址:
                 <a class="blue"><img src="images/icon_chrome.png"/>谷歌浏览器</a>
                 <a class="blue"><img src="images/icon_firefox.png"/>火狐浏览器</a>
             </p>
-            <p>技术支持: 020-38920788</p>--%>
         </div>
     </div>
-</form>
-<%--<script src="${_cdnStaticResourcesPath}/resources/static/layui/layui.js" charset="utf-8"></script>--%>
-<script src="${_cdnStaticResourcesPath}/resources/static/js/jquery-1.9.1.min.js" charset="utf-8"></script>
+
 <link href="${_cdnStaticResourcesPath}/resources/static/js/plugins/message/message.css" type="text/css" rel="stylesheet" />
 <script src="${_cdnStaticResourcesPath}/resources/static/js/plugins/message/message.js"></script>
 <script src="${_cdnStaticResourcesPath}/resources/static/script/login/login.js"></script>
-<%--<script>
-    layui.use(['form', 'layedit', 'laydate'], function () {
-        var form = layui.form
-                , layer = layui.layer
-                , layedit = layui.layedit
-                , laydate = layui.laydate;
-    });
-</script>--%>
+
 </body>
 </html>
